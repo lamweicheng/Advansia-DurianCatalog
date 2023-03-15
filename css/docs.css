@@ -3,18 +3,6 @@ body{
 	padding:0;
 	overflow:hidden;
 }
-
-@media screen and (max-width: 767px) {
-	#canvas {
-	  width: 100%;
-	  height: auto;
-	}
- 
-	.Advansia-Docs {
-	  width: 100%;
-	  height: auto;
-	}
- }
  
 #canvas{
 	width: 1200px;
@@ -229,3 +217,14 @@ body{
 	cursor: pointer;
  }
  
+ @media screen and (max-width: 767px) {
+	#canvas {
+	  width: 100%;
+	  height: auto;
+	}
+ 
+	.Advansia-Docs {
+	  width: 100%;
+	  height: auto;
+	}
+ }
