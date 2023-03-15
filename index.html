@@ -46,6 +46,11 @@
         background-color: #4b87d5;
 	 }
 
+	 .flipbook-mobile {
+	transform: scale(0.8);
+	max-height: 100%;
+}
+
 	 @media (max-width: 767px) {
   .Advansia-Docs .double {
     display: none;
@@ -340,23 +345,21 @@ function loadApp() {
 			
     }
 }
-
-
 	}
-
 	
 	}). turn('page', 1);
-
 
 	$('#slider').slider('option', 'max', numberOfViews(flipbook));
 
 	flipbook.addClass('animated');
 
-
 	// Show canvas
 
 	$('#canvas').css({visibility: 'visible'});
+	adjustForMobile();
 }
+
+
 
 
 // Hide canvas
@@ -390,6 +393,20 @@ window.onclick = function(event) {
   }
 }
 
+function adjustForMobile() {
+  var isMobile = window.innerWidth <= 767;
+  var flipbook = $('.Advansia-Docs');
+
+  if (isMobile) {
+    flipbook.addClass('flipbook-mobile');
+  } else {
+    flipbook.removeClass('flipbook-mobile');
+  }
+}
+
+$(window).resize(function() {
+  adjustForMobile();
+});
 
 
 </script>
