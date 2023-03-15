@@ -100,57 +100,6 @@ body{
 	box-shadow:0 0 20px #ccc;
 }
 
-.Advansia-Docs .tabs{
-	width:942px;
-	height:22px;
-	top:-22px;
-	position:relative;
-	z-index:1;
-}
-
-.Advansia-Docs .tabs > div{
-	width:461px;
-	height:22px;
-	float:left;
-}
-
-.Advansia-Docs .tabs .left{
-	text-align:left;
-	margin-left:10px;
-}
-
-
-.Advansia-Docs .tabs .right{
-	text-align:right;
-	margin-right:10px;
-}
-
-.Advansia-Docs .tabs a{
-	color:black;
-	-webkit-border-image: url(pics/tab-off.png) 5 20 5 20 repeat stretch;
-	border-width: 5px 20px 5px 20px;
-	display:inline-block;
-	font:bold 11px arial;
-	text-shadow:1px 1px 0 #ddd;
-	color:#333;
-	line-height:12px;
-	text-decoration:none;
-}
-
-.Advansia-Docs .tabs .on,
-.Advansia-Docs .tabs .on:hover{
-	-webkit-border-image: url(pics/tab-on.png) 5 20 5 20 repeat stretch;
-	cursor:default;
-}
-
-.Advansia-Docs .tabs a:hover{
-	color:black;
-	text-decoration: none;
-	cursor:pointer;
-	-webkit-border-image: url(pics/tab-hover.png) 5 20 5 20 repeat stretch;
-
-}
-
 #slider-container {
 	display: flex;
 	align-items: center;
