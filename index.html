@@ -45,6 +45,12 @@
     .info-button:hover {
         background-color: #4b87d5;
 	 }
+
+	 @media (max-width: 767px) {
+  .Advansia-Docs .double {
+    display: none;
+  }
+}
 </style>
 
 <body>
@@ -107,6 +113,8 @@
 
 function loadApp() {
 
+	var isMobile = window.innerWidth <= 767;
+  	var totalPages = 28; // total page for the catalog
 	var flipbook = $('.Advansia-Docs');
 
 	// Check if the CSS was already loaded
@@ -244,7 +252,9 @@ function loadApp() {
 		gradients: true,
 		autoCenter: true,
 		duration: 1000,
-		pages: 28, //total page for the catalog
+		pages: totalPages, //total page for the catalog
+      display: isMobile ? 'single' : 'double',
+
 		when: {
 
 		turning: function(e, page, view) {
@@ -252,6 +262,8 @@ function loadApp() {
 			var book = $(this),
 			currentPage = book.turn('page'),
 			pages = book.turn('pages');
+
+			
 				
 			if (currentPage>3 && currentPage<pages-3) {
 				if (page==1) {
@@ -282,7 +294,7 @@ function loadApp() {
 			
 
 		},
-
+		
 		turned: function(e, page, view) {
 
 			var book = $(this);
@@ -325,10 +337,14 @@ function loadApp() {
 					var img_src = "pages/" + pages[i] + ".png";
 			}
 			addPage(pages[i], $(this), img_src);
+			
     }
 }
 
+
 	}
+
+	
 	}). turn('page', 1);
 
 
