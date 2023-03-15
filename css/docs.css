@@ -6,6 +6,7 @@ body{
 	justify-content: center; /* Add this line */
 	align-items: center; /* Add this line */
 	height: calc(100vh - 60px); /* Adjust this value to accommodate the footer */
+	overflow-y: scroll;
 }
  
 #canvas{
@@ -220,6 +221,32 @@ body{
 	cursor: pointer;
  }
 
+ /* For Webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+	width: 12px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+	background-color: #f5f5f5;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 10px;
+	border: 3px solid #f5f5f5;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+	background-color: #555;
+ }
+ 
+ /* For Firefox */
+ html {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #f5f5f5;
+ }
+ 
+
 /* For iphone 14 pro max screen size */
  @media screen and (max-width: 1284px) and (min-width: 1125px) {
 	#canvas {
@@ -243,7 +270,7 @@ body{
 
 
 	.info-button {
-		font-size: 6px; /* Adjust the font size for mobile */
+		font-size: 5px; /* Adjust the font size for mobile */
 		padding: 6px 10px; /* Adjust the button padding for mobile */
   }	
   .slider, .arrow-left, .arrow-right {
@@ -274,7 +301,7 @@ body{
 
 
 	.info-button {
-		font-size: 6px; /* Adjust the font size for mobile */
+		font-size: 5px; /* Adjust the font size for mobile */
 		padding: 6px 10px; /* Adjust the button padding for mobile */
   }	
   .slider, .arrow-left, .arrow-right {
@@ -312,5 +339,6 @@ body{
   .slider, .arrow-left, .arrow-right {
 	display: none;
 }
+
 
 }
