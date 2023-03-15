@@ -6,7 +6,7 @@ body{
 	justify-content: center; /* Add this line */
 	align-items: center; /* Add this line */
 	height: calc(100vh - 60px); /* Adjust this value to accommodate the footer */
-	overflow-y: scroll;
+	 overflow-y: scroll;
 }
  
 #canvas{
