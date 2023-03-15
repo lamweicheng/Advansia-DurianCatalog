@@ -10,42 +10,108 @@
 </head>
 
 <style>
-	 .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 10px;
-    }
+	.footer {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  position: fixed;
+	  left: 0;
+	  bottom: 0;
+	  width: 100%;
+	  background-color: #f1f1f1;
+	  text-align: center;
+	  padding: 10px;
+	}
+ 
+	.footer p {
+	  margin: 0;
+	  padding: 0;
+	  line-height: 1.5; /* Adjust this value to control the gap */
+	}
+ 
+	.info-button {
+	  position: fixed;
+	  bottom: 13px; /* Adjust the distance from the bottom */
+	  right: 20px; /* Adjust the distance from the right */
+	  background-color: #1ab61a; /* Button color */
+	  color: white; /* Text color */
+	  padding: 10px 20px;
+	  border: none;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  border-radius: 5px;
+	}
+ 
+	.info-button:hover {
+	  background-color: #4b87d5;
+	}
 
-    .footer p {
-        margin: 0;
-        padding: 0;
-        line-height: 1.5; /* Adjust this value to control the gap */
-    }
+	/* Responsive design styles */
+	@media (max-width: 767px) {
+		/* Mobile styles here */
+		.footer {
+			padding: 5px;
+		}
 
-	 .info-button {
-        position: fixed;
-        bottom: 13px; /* Adjust the distance from the bottom */
-        right: 20px; /* Adjust the distance from the right */
-        background-color: #1ab61a; /* Button color */
-        color: white; /* Text color */
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        border-radius: 5px;
-    }
+		.info-button {
+			bottom: 8px;
+			right: 10px;
+			padding: 8px 16px;
+			font-size: 14px;
+		}
+	}
 
-    .info-button:hover {
-        background-color: #4b87d5;
-	 }
-</style>
+	@media (min-width: 768px) and (max-width: 991px) {
+	/* Tablet styles here */
+		.footer {
+			padding: 8px;
+	}
+
+		.info-button {
+			bottom: 10px;
+			right: 15px;
+			padding: 9px 18px;
+			font-size: 15px;
+		}
+	}
+
+	@media (min-width: 992px) and (max-width: 1199px) {
+	/* Small desktop styles here */
+		.footer {
+			padding: 10px;
+		}
+
+		.info-button {
+			bottom: 13px;
+			right: 20px;
+			padding: 10px 20px;
+			font-size: 16px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		/* Large desktop styles here */
+		.footer {
+			padding: 12px;
+		}
+
+		.info-button {
+			bottom: 15px;
+			right: 25px;
+			padding: 12px 24px;
+			font-size: 18px;
+		}
+	}
+
+
+
+
+ </style>
+ 
 
 <body>
 
