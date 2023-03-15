@@ -48,29 +48,6 @@
     .info-button:hover {
         background-color: #4b87d5;
 	 }
-
-	 .scrolling-container {
-		position: relative;
-		overflow: hidden;
-		height: 100vh;
-		width: 100%;
-	 }
-	.scrolling-container .content {
-		position: absolute;
-		width: 100%;
-		white-space: nowrap;
-		animation: scrolling-animation 10s linear infinite;
-
-		@keyframes scrolling-animation {
-			0% {
-				transform: translateY(100%);
-			}
-			100% {
-				transform: translateY(-100%);
-  }
-}
-
-}
 	 
 </style>
 
@@ -86,23 +63,12 @@
 		</div>
 	</div>
 
-	<div class="scrolling-container">
-		<div class="content">
-		  <div id="canvas">
-	 
-			 <div id="book-zoom">
-				<div class="Advansia-Docs">
-				  <div ignore="1" class="tabs"><div class="left">  </div> <div class="right"> </div></div>
-				</div>
-			 </div>
-		</div>
-	</div>
 
 	<div id="slider-container">
 		<div class="arrow left-arrow">&larr;</div>
-			<div id="slider-bar" class="turnjs-slider">
-				<div id="slider"></div>
-			</div>
+		<div id="slider-bar" class="turnjs-slider">
+			 <div id="slider"></div>
+		</div>
 		<div class="arrow right-arrow">&rarr;</div>
   </div>
   
