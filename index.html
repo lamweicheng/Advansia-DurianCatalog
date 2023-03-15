@@ -25,8 +25,6 @@
 		padding: 10px;
     }
 
-	
-
     .footer p {
         margin: 0;
         padding: 0;
@@ -47,7 +45,7 @@
         display: inline-block;
         font-size: 16px;
         border-radius: 4px;
-		  z-index: 1000;
+		z-index: 1000;
     }
 
 	.slider-footer-wrapper {
@@ -58,36 +56,27 @@
 		z-index: 1000; /* Ensures the wrapper stays on top */
 	}
 
-	.footer {
-	background-color: rgba(255, 255, 255, 0.9); /* You can adjust the background color and opacity */
-	text-align: center;
-	padding: 10px;
-	}
-
     .info-button:hover {
         background-color: #4b87d5;
-	 }
-	 
+	 } 
 </style>
 
 <body>
 
 	<div id="canvas">
-		
 		<div id="book-zoom">
 			<div class="Advansia-Docs">
 				<div ignore="1" class="tabs"><div class="left">  </div> <div class="right"> </div></div>
 			</div>
 		</div>
-	
 	</div>
 	
 	<div class="slider-footer-wrapper">
 		<div id="slider-container">
 			<div class="arrow left-arrow">&larr;</div>
-			<div id="slider-bar" class="turnjs-slider">
-				 <div id="slider"></div>
-			</div>
+				<div id="slider-bar" class="turnjs-slider">
+					<div id="slider"></div>
+				</div>
 			<div class="arrow right-arrow">&rarr;</div>
 		</div>
 	
@@ -100,27 +89,23 @@
 	<button id="openModal" class="info-button">The Creator</button>
 	
 	<div id="infoModal" class="modal">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <span id="closeModal" class="close">&times;</span>
-		  <h4 class="modal-title"> Anderson Lam Wei Cheng</h4>
-		</div>
+	 	<div class="modal-content">
+			<div class="modal-header">
+				<span id="closeModal" class="close">&times;</span>
+				<h4 class="modal-title"> Anderson Lam Wei Cheng</h4>
+			</div>
 		<div class="modal-body">
 		  <p> 👋  Undergraduate Junior at UC Berkeley | Electrical Engineering and Computer Sciences - Entrepreneurship and Technology.</p>
-		  <p> 👀  I am passionate about building and designing hardware equipment to solve world problems for our society, especially in the agricultural industry. </p>
-		  <p> 👀  I particularly interested in UAVs, Precision Agriculture, Machine Learning, Database and Business Marketing.</p>
+			<p> 👀  I am passionate about building and designing hardware equipment to solve world problems for our society, especially in the agricultural industry. </p>
+			<p> 👀  I particularly interested in UAVs, Precision Agriculture, Machine Learning, Database and Business Marketing.</p>
 			<p> 📫  My Linkedin: <a href="https://www.linkedin.com/in/weichenglam/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/weichenglam/</a></p>
-		  <p> 📖  My Personal Portfolio: <a href="https://www.andersonlam.info/" target="_blank" rel="noopener noreferrer">https://www.andersonlam.info/</a></p>
-		 <p>. </p>
-		  <p>. </p>
+			<p> 📖  My Personal Portfolio: <a href="https://www.andersonlam.info/" target="_blank" rel="noopener noreferrer">https://www.andersonlam.info/</a></p>
+			<br> </br>
+			<br> </br>
 			<p> Please report any issues here: <a href="mailto:lamweicheng@berkeley.edu">lamweicheng@berkeley.edu</a> </p>
 		</div>
-	   
-		</div>
-	  </div>
 	</div>
 	
-
 
 <script type="text/javascript">
 	
@@ -129,48 +114,45 @@ function loadApp() {
 
 	var flipbook = $('.Advansia-Docs');
 
-	// Check if the CSS was already loaded
-	
 	if (flipbook.width()==0 || flipbook.height()==0) {
 		setTimeout(loadApp, 10);
 		return;
 	}
 
 	// Mousewheel
+	// $('#book-zoom').mousewheel(function(event, delta, deltaX, deltaY) {
 
-	$('#book-zoom').mousewheel(function(event, delta, deltaX, deltaY) {
+	// 	var data = $(this).data(),
+	// 		step = 30,
+	// 		flipbook = $('.Advansia-Docs'),
+	// 		actualPos = $('#slider').slider('value')*step;
 
-		var data = $(this).data(),
-			step = 30,
-			flipbook = $('.Advansia-Docs'),
-			actualPos = $('#slider').slider('value')*step;
+	// 	if (typeof(data.scrollX)==='undefined') {
+	// 		data.scrollX = actualPos;
+	// 		data.scrollPage = flipbook.turn('page');
+	// 	}
 
-		if (typeof(data.scrollX)==='undefined') {
-			data.scrollX = actualPos;
-			data.scrollPage = flipbook.turn('page');
-		}
+	// 	data.scrollX = Math.min($( "#slider" ).slider('option', 'max')*step,
+	// 		Math.max(0, data.scrollX + deltaX));
 
-		data.scrollX = Math.min($( "#slider" ).slider('option', 'max')*step,
-			Math.max(0, data.scrollX + deltaX));
+	// 	var actualView = Math.round(data.scrollX/step),
+	// 		page = Math.min(flipbook.turn('pages'), Math.max(1, actualView*2 - 2));
 
-		var actualView = Math.round(data.scrollX/step),
-			page = Math.min(flipbook.turn('pages'), Math.max(1, actualView*2 - 2));
+	// 	if ($.inArray(data.scrollPage, flipbook.turn('view', page))==-1) {
+	// 		data.scrollPage = page;
+	// 		flipbook.turn('page', page);
+	// 	}
 
-		if ($.inArray(data.scrollPage, flipbook.turn('view', page))==-1) {
-			data.scrollPage = page;
-			flipbook.turn('page', page);
-		}
-
-		if (data.scrollTimer)
-			clearInterval(data.scrollTimer);
+	// 	if (data.scrollTimer)
+	// 		clearInterval(data.scrollTimer);
 		
-		data.scrollTimer = setTimeout(function(){
-			data.scrollX = undefined;
-			data.scrollPage = undefined;
-			data.scrollTimer = undefined;
-		}, 1000);
+	// 	data.scrollTimer = setTimeout(function(){
+	// 		data.scrollX = undefined;
+	// 		data.scrollPage = undefined;
+	// 		data.scrollTimer = undefined;
+	// 	}, 1000);
 
-	});
+	// });
 
 	// Slider
 
@@ -185,7 +167,6 @@ function loadApp() {
 				_thumbPreview.appendTo($(ui.handle));
 			} else
 				setPreview(ui.value);
-
 			moveBar(false);
 		},
 
@@ -205,60 +186,48 @@ function loadApp() {
 
 	$(document).ready(function() {
     // Add click event listener for the left arrow
-    $(".left-arrow").on("click", function() {
-        $(".Advansia-Docs").turn("previous");
-    });
+		$(".left-arrow").on("click", function() {
+			$(".Advansia-Docs").turn("previous");
+		});
 
-    // Add click event listener for the right arrow
-    $(".right-arrow").on("click", function() {
-        $(".Advansia-Docs").turn("next");
-    });
-});
+		// Add click event listener for the right arrow
+		$(".right-arrow").on("click", function() {
+			$(".Advansia-Docs").turn("next");
+		});
+	});
 
 
 
 	// URIs
-	
 	Hash.on('^page\/([0-9]*)$', {
 		yep: function(path, parts) {
 			var page = parts[1];
-
 			if (page!==undefined) {
 				if ($('.Advansia-Docs').turn('is'))
 					$('.Advansia-Docs').turn('page', page);
 			}
-
 		},
 		nop: function(path) {
-
 			if ($('.Advansia-Docs').turn('is'))
 				$('.Advansia-Docs').turn('page', 1);
 		}
 	});
 
 	// Arrows
-
 	$(document).keydown(function(e){
 
 		var previous = 37, next = 39;
-
 		switch (e.keyCode) {
 			case previous:
-
 				$('.Advansia-Docs').turn('previous');
-
 			break;
 			case next:
-				
 				$('.Advansia-Docs').turn('next');
-
 			break;
 		}
-
 	});
 
 	// Create the flipbook
-
 	flipbook.turn({
 		elevation: 50,
 		acceleration: false,
@@ -316,14 +285,11 @@ function loadApp() {
 				$('.Advansia-Docs .tabs').hide();
 
 			book.turn('center');
-			//updateTabs();
 
 		},
 
 		start: function(e, pageObj) {
-	
 			moveBar(true);
-
 		},
 
 		end: function(e, pageObj) {
@@ -347,19 +313,14 @@ function loadApp() {
 			}
 			addPage(pages[i], $(this), img_src);
     }
-}
-
-	}
+	}}
 	}). turn('page', 1);
 
-
 	$('#slider').slider('option', 'max', numberOfViews(flipbook));
-
 	flipbook.addClass('animated');
 
 
 	// Show canvas
-
 	$('#canvas').css({visibility: 'visible'});
 }
 
@@ -398,6 +359,5 @@ window.onclick = function(event) {
 
 
 </script>
-
 </body>
 </html>
