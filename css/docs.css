@@ -2,16 +2,16 @@ body{
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	display: flex; /* Add this line */
-	justify-content: center; /* Add this line */
-	align-items: center; /* Add this line */
-	height: calc(100vh - 60px); /* Adjust this value to accommodate the footer */
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	height: calc(100vh - 20px);
 	overflow-y: scroll;
 }
  
 #canvas{
 	width: 1200px;
-	 height: calc(100% - 60px); /* Adjust this value to accommodate the footer */
+	 height: calc(100% - 20px);
 }
 
 #book-zoom{
@@ -31,7 +31,7 @@ body{
 }
 
 .Advansia-Docs{
-	margin-top:20px;
+	margin-top:10x;
 	width:1182px;
 	height:750px;
 }
@@ -120,7 +120,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 40px; /* Add this property to increase the slider-bar height */
+	height: 40px; 
 }
 
 #slider-container .left-arrow {
