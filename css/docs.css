@@ -26,6 +26,8 @@ body{
 	transition:margin-left 0.2s ease-in-out;
 }
 
+
+
 .Advansia-Docs{
 	margin-top:20px;
 	width:1182px;
@@ -231,7 +233,7 @@ body{
 	.Advansia-Docs .page {
 	  width: 100%; /* Change this from the fixed width to a percentage value */
 	}
-	
+
 	.footer {
 		padding: 5px; /* Reduce the padding on mobile devices */
 		font-size: 12px; /* Reduce the font size on mobile devices */
