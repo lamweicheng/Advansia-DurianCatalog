@@ -2,12 +2,18 @@ body{
 	margin:0;
 	padding:0;
 	overflow:hidden;
-}
+	display: flex;           /* Add this line */
+	justify-content: center; /* Add this line */
+	align-items: center;     /* Add this line */
+	min-height: 100vh;       /* Add this line */
+ }
+ 
+
  
 #canvas{
-	width: 1200px;
-	height: 750px;
-	margin: 100px auto;
+	width: 80vw;
+  height: 80vh;
+  
 }
 
 #book-zoom{
@@ -216,15 +222,16 @@ body{
 	text-decoration: none;
 	cursor: pointer;
  }
- 
- @media screen and (max-width: 767px) {
+
+ /* Media query for mobile screens */
+@media screen and (max-width: 767px) {
 	#canvas {
-	  width: 100%;
+	  width: 100vw;
 	  height: auto;
 	}
  
 	.Advansia-Docs {
-	  width: 100%;
+	  width: 100vw;
 	  height: auto;
 	}
  }
