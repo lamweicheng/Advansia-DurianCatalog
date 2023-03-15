@@ -6,21 +6,26 @@
 <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
 <script type="text/javascript" src="lib/hash.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-
 </head>
 
 <style>
 	 .footer {
-		position: fixed;
+		/* position: fixed;
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		background-color: rgba(255, 255, 255, 0.9); /* You can adjust the background color and opacity */
+		background-color: rgba(255, 255, 255, 0.9);  */
+		/* text-align: center;
+		padding: 10px; */
+		/* z-index: 1000; Ensures the footer stays on top */
+
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.9); 
 		text-align: center;
 		padding: 10px;
-		z-index: 1000; /* Ensures the footer stays on top */
     }
+
+	
 
     .footer p {
         margin: 0;
@@ -45,6 +50,20 @@
 		  z-index: 1000;
     }
 
+	.slider-footer-wrapper {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 1000; /* Ensures the wrapper stays on top */
+	}
+
+	.footer {
+	background-color: rgba(255, 255, 255, 0.9); /* You can adjust the background color and opacity */
+	text-align: center;
+	padding: 10px;
+	}
+
     .info-button:hover {
         background-color: #4b87d5;
 	 }
@@ -53,57 +72,54 @@
 
 <body>
 
-<div id="canvas">
-	
-	<div id="book-zoom">
-		<div class="Advansia-Docs">
-			<div ignore="1" class="tabs"><div class="left">  </div> <div class="right"> </div></div>
+	<div id="canvas">
 		
-
+		<div id="book-zoom">
+			<div class="Advansia-Docs">
+				<div ignore="1" class="tabs"><div class="left">  </div> <div class="right"> </div></div>
+			</div>
+		</div>
+	
+	</div>
+	
+	<div class="slider-footer-wrapper">
+		<div id="slider-container">
+			<div class="arrow left-arrow">&larr;</div>
+			<div id="slider-bar" class="turnjs-slider">
+				 <div id="slider"></div>
+			</div>
+			<div class="arrow right-arrow">&rarr;</div>
+		</div>
+	
+		<div class="footer">
+			<p>Copyright© 2023 - All Rights Reserved</p>
+			<p><a href="https://www.advansia.com" target="_blank" rel="noopener noreferrer">www.advansia.com</a></p>
 		</div>
 	</div>
-
-
-	<div id="slider-container">
-		<div class="arrow left-arrow">&larr;</div>
-		<div id="slider-bar" class="turnjs-slider">
-			 <div id="slider"></div>
+	
+	<button id="openModal" class="info-button">The Creator</button>
+	
+	<div id="infoModal" class="modal">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <span id="closeModal" class="close">&times;</span>
+		  <h4 class="modal-title"> Anderson Lam Wei Cheng</h4>
 		</div>
-		<div class="arrow right-arrow">&rarr;</div>
-  </div>
-  
-
-</div>
-
-<div class="footer">
-	<p>Copyright© 2023 - All Rights Reserved</p>
-	<p><a href="https://www.advansia.com" target="_blank" rel="noopener noreferrer">www.advansia.com</a></p>
-</div>
-
-
-
-<button id="openModal" class="info-button">The Creator</button>
-
-<div id="infoModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span id="closeModal" class="close">&times;</span>
-      <h4 class="modal-title"> Anderson Lam Wei Cheng</h4>
-    </div>
-    <div class="modal-body">
-      <p> 👋  Undergraduate Junior at UC Berkeley | Electrical Engineering and Computer Sciences - Entrepreneurship and Technology.</p>
-      <p> 👀  I am passionate about building and designing hardware equipment to solve world problems for our society, especially in the agricultural industry. </p>
-      <p> 👀  I particularly interested in UAVs, Precision Agriculture, Machine Learning, Database and Business Marketing.</p>
-		<p> 📫  My Linkedin: <a href="https://www.linkedin.com/in/weichenglam/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/weichenglam/</a></p>
-      <p> 📖  My Personal Portfolio: <a href="https://www.andersonlam.info/" target="_blank" rel="noopener noreferrer">https://www.andersonlam.info/</a></p>
-     <p>. </p>
-	  <p>. </p>
-		<p> Please report any issues here: <a href="mailto:lamweicheng@berkeley.edu">lamweicheng@berkeley.edu</a> </p>
+		<div class="modal-body">
+		  <p> 👋  Undergraduate Junior at UC Berkeley | Electrical Engineering and Computer Sciences - Entrepreneurship and Technology.</p>
+		  <p> 👀  I am passionate about building and designing hardware equipment to solve world problems for our society, especially in the agricultural industry. </p>
+		  <p> 👀  I particularly interested in UAVs, Precision Agriculture, Machine Learning, Database and Business Marketing.</p>
+			<p> 📫  My Linkedin: <a href="https://www.linkedin.com/in/weichenglam/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/weichenglam/</a></p>
+		  <p> 📖  My Personal Portfolio: <a href="https://www.andersonlam.info/" target="_blank" rel="noopener noreferrer">https://www.andersonlam.info/</a></p>
+		 <p>. </p>
+		  <p>. </p>
+			<p> Please report any issues here: <a href="mailto:lamweicheng@berkeley.edu">lamweicheng@berkeley.edu</a> </p>
+		</div>
+	   
+		</div>
+	  </div>
 	</div>
-   
-    </div>
-  </div>
-</div>
+	
 
 
 <script type="text/javascript">
