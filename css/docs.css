@@ -218,31 +218,99 @@ body{
 	text-decoration: none;
 	cursor: pointer;
  }
- 
- @media screen and (max-width: 767px) {
-	#canvas {
-	  width: 100vw;
-	  height: auto;
-	}
- 
-	.Advansia-Docs {
-	  width: 100vw;
-	  height: auto;
-	}
- 
-	.Advansia-Docs .page {
-	  width: 100%; /* Change this from the fixed width to a percentage value */
+ /* Responsive design styles */
+@media (max-width: 767px) {
+	/* Mobile styles here */
+	.footer {
+		padding: 5px;
 	}
 
+	.info-button {
+		bottom: 8px;
+		right: 10px;
+		padding: 8px 16px;
+		font-size: 14px;
+	}
+
+	/* Add mobile styles for the slider and arrow */
+	#slider-container {
+		width: 80%;
+		left: 10%;
+	}
+
+	.arrow {
+		font-size: 20px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	/* Tablet styles here */
 	.footer {
-		padding: 5px; /* Reduce the padding on mobile devices */
-		font-size: 12px; /* Reduce the font size on mobile devices */
-	 }
-  
-	 .info-button {
-		bottom: 10px; /* Adjust the distance from the bottom */
-		right: 10px; /* Adjust the distance from the right */
-		padding: 8px 16px; /* Reduce the padding on mobile devices */
-		font-size: 14px; /* Reduce the font size on mobile devices */
-	 }
- }
+		padding: 8px;
+	}
+
+	.info-button {
+		bottom: 10px;
+		right: 15px;
+		padding: 9px 18px;
+		font-size: 15px;
+	}
+
+	/* Add tablet styles for the slider and arrow */
+	#slider-container {
+		width: 70%;
+		left: 15%;
+	}
+
+	.arrow {
+		font-size: 24px;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	/* Small desktop styles here */
+	.footer {
+		padding: 10px;
+	}
+
+	.info-button {
+		bottom: 13px;
+		right: 20px;
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+
+	/* Add small desktop styles for the slider and arrow */
+	#slider-container {
+		width: 60%;
+		left: 20%;
+	}
+
+	.arrow {
+		font-size: 28px;
+	}
+}
+
+@media (min-width: 1200px) {
+	/* Large desktop styles here */
+	.footer {
+		padding: 12px;
+	}
+
+	.info-button {
+		bottom: 15px;
+		right: 25px;
+		padding: 12px 24px;
+		font-size: 18px;
+	}
+
+	/* Add large desktop styles for the slider and arrow */
+	#slider-container {
+		width: 50%;
+		left: 25%;
+	}
+
+	.arrow {
+		font-size: 32px;
+	}
+}
