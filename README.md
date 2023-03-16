@@ -6,7 +6,7 @@
 - Programming Language used: HTML, CSS, JavaScript
 - Date First Created: March 10, 2023 
 - Date Last Updated: March 16, 2023
-- Online site: https://lamweicheng.github.io/Advansia-DurianCatalog/
+- Online site: https://lamweicheng.github.io/Advansia-DurianCatalogue/
 - Advansia Website : https://www.advansia.com/
 
 
