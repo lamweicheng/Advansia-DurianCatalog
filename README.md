@@ -2,7 +2,7 @@
 
 #### Code Programmer: Anderson Lam Wei Cheng, Junior at UC Berkeley EECS'24, lamweicheng@berkeley.edu
 
-- Purpose: Publishing Advansia Sdn Bhd Malaysia's Durian Package Catalogue
+- Purpose: Publishing **Advansia Sdn Bhd Malaysia's Durian Package Catalogue**
 - Programming Language used: HTML, CSS, JavaScript
 - Date First Created: March 10, 2023 
 - Date Last Updated: March 15, 2023
