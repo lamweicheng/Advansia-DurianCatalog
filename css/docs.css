@@ -315,14 +315,35 @@ body{
 	}
 
 	.footer {
-		 padding: 12px;
-		 font-size: 12px;
+		position: relative; /* Make the footer a relative container */
+		z-index: 10; /* Make sure the footer is above other elements */
+		padding: 12px;
+		font-size: 12px;
+		bottom:0;
 	}
 
 	.info-button {
 		font-size: 6px;
 		padding: 5px 5px;
   }
+
+  .arrow-left, .arrow-right {
+	font-size: 24px;
+	bottom: 60px;
+	z-index: 11; /* Make sure arrows are above other elements */
+	}
+
+	.arrow-left {
+		left: 20%;
+	}
+
+	.arrow-right {
+		right: 20%;
+	}
+
+	#slider-container {
+		display:none;
+	}
 
   .zoom-controls {
 	display: flex;
@@ -346,7 +367,4 @@ body{
 
 }
 
-  	/* #slider-container .slider, .arrow-left, .arrow-right {
-	display: none; 
-	} */
 
