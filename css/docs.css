@@ -57,7 +57,26 @@ body{
 	background-color: #4b87d5;
  } 
 
- 
+ .zoom-controls {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 99;
+}
+
+.zoom-button {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	font-size: 18px;
+	padding: 2px 8px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+
+
+
 #book-zoom{
 	-webkit-transition: -webkit-transform 1s;
 	-moz-transition: -moz-transform 1s;
@@ -283,7 +302,7 @@ body{
 @media screen and (max-width: 767px) {
 	#canvas {
 		 width: 100vw;
-		 height: 50vh;
+		 height: 80vh;
 	}
 
 	.Advansia-Docs {
@@ -292,7 +311,7 @@ body{
 	}
 
 	.Advansia-Docs .page {
-		 width: 90%; /* Adjust the width to 90% for mobile devices */
+		 width: 50%; /* Adjust the width to 90% for mobile devices */
 	}
 
 	.footer {
@@ -305,7 +324,29 @@ body{
 		padding: 5px 5px;
   }
 
+  .zoom-controls {
+	display: flex;
+	flex-direction: row;
+}
+  .zoom-button {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	font-size: 18px;
+	width: 30px; /* Fixed width */
+	height: 30px; /* Fixed height */
+	display: flex; /* Added to align content both horizontally and vertically */
+	align-items: center; /* Align content vertically */
+	justify-content: center; /* Align content horizontally */
+	margin-left: 10px;
+	cursor: pointer;
+  }
+
+
+
+}
+
   	/* #slider-container .slider, .arrow-left, .arrow-right {
 	display: none; 
 	} */
-}
+

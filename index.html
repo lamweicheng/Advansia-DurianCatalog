@@ -9,14 +9,50 @@
 </head>
 
 <style>
+.zoom-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+}
+
+.zoom-button {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 18px;
+	 width: 36px; /* Fixed width */
+    height: 36px; /* Fixed height */
+    display: flex; /* Added to align content both horizontally and vertically */
+    align-items: center; /* Align content vertically */
+    justify-content: center; /* Align content horizontally */
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
 </style>
 
 <body>
+	<div class="zoom-controls">
+		<button id="zoomIn" class="zoom-button">+</button>
+		<button id="zoomOut" class="zoom-button">-</button>
+  </div>
+  
+  
 
 	<div id="canvas">
-		<div id="book-zoom">
-			<div class="Advansia-Docs">
-				<div ignore="1" class="tabs"><div class="left">  </div> <div class="right"> </div></div>
+		
+		<div id="book-zoom" class="Advansia-Docs">
+			
+					<div ignore="1" class="tabs">
+						<div 
+							class="left">  
+						</div> 
+					<div 
+						class="right"> 
+					</div>
+			
 			</div>
 		</div>
 	</div>
@@ -69,40 +105,16 @@ function loadApp() {
 		return;
 	}
 
-	// Mousewheel
-	// $('#book-zoom').mousewheel(function(event, delta, deltaX, deltaY) {
+	$("#zoomIn").on("click", function() {
+        zoom(1.1);
+    });
 
-	// 	var data = $(this).data(),
-	// 		step = 30,
-	// 		flipbook = $('.Advansia-Docs'),
-	// 		actualPos = $('#slider').slider('value')*step;
+    // Add click event listener for the zoom out button
+    $("#zoomOut").on("click", function() {
+        zoom(1 / 1.1);
+    });
 
-	// 	if (typeof(data.scrollX)==='undefined') {
-	// 		data.scrollX = actualPos;
-	// 		data.scrollPage = flipbook.turn('page');
-	// 	}
-
-	// 	data.scrollX = Math.min($( "#slider" ).slider('option', 'max')*step,
-	// 		Math.max(0, data.scrollX + deltaX));
-
-	// 	var actualView = Math.round(data.scrollX/step),
-	// 		page = Math.min(flipbook.turn('pages'), Math.max(1, actualView*2 - 2));
-
-	// 	if ($.inArray(data.scrollPage, flipbook.turn('view', page))==-1) {
-	// 		data.scrollPage = page;
-	// 		flipbook.turn('page', page);
-	// 	}
-
-	// 	if (data.scrollTimer)
-	// 		clearInterval(data.scrollTimer);
-		
-	// 	data.scrollTimer = setTimeout(function(){
-	// 		data.scrollX = undefined;
-	// 		data.scrollPage = undefined;
-	// 		data.scrollTimer = undefined;
-	// 	}, 1000);
-
-	// });
+	 
 
 	//Slider
 	$( "#slider" ).slider({
@@ -304,6 +316,31 @@ window.onclick = function(event) {
     document.getElementById("infoModal").style.display = "none";
   }
 }
+
+$(document).ready(function() {
+    // Add click event listener for the zoom in button
+    $("#zoomIn").on("click", function() {
+        zoom(1.1);
+    });
+
+    // Add click event listener for the zoom out button
+    $("#zoomOut").on("click", function() {
+        zoom(1 / 1.1);
+    });
+});
+
+function zoom(factor) {
+    var flipbook = $("#book-zoom");
+    var currentZoom = flipbook.data("zoom") || 1;
+    var newZoom = currentZoom * factor;
+    flipbook.css("transform-origin", "center center");
+    flipbook.css("transform", "scale(" + newZoom + ")");
+    flipbook.data("zoom", newZoom);
+}
+
+
+
+
 
 
 
