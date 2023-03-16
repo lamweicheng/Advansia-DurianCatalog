@@ -240,8 +240,8 @@ body{
 		font-size: 6px; /* Adjust the font size for mobile */
 		padding: 6px 10px; /* Adjust the button padding for mobile */
   }	
-  .slider, .arrow-left, .arrow-right {
-	display: none;
+  #slider-container .slider, .arrow-left, .arrow-right {
+	display: none; 
 }
 }
 
@@ -271,8 +271,9 @@ body{
 		font-size: 6px; /* Adjust the font size for mobile */
 		padding: 6px 10px; /* Adjust the button padding for mobile */
   }	
-  .slider, .arrow-left, .arrow-right {
-	display: none;
+  
+  #slider-container .slider, .arrow-left, .arrow-right {
+	display: none; 
 }
 
 }
@@ -281,30 +282,28 @@ body{
 @media screen and (max-width: 767px) {
 	#canvas {
 		 width: 100vw;
-		 height: 100vh;
+		 height: 50vh;
 	}
 
 	.Advansia-Docs {
 		 width: 100vw;
-		 height: 100vh;
+		 height: 50vh; 
 	}
 
 	.Advansia-Docs .page {
-		 width: 90%; /* Adjust the width to 100% for mobile devices */
+		 width: 90%; /* Adjust the width to 90% for mobile devices */
 	}
 
 	.footer {
-		 padding: 10px;
+		 padding: 12px;
 		 font-size: 12px;
 	}
 
 	.info-button {
-		font-size: 5px;
+		font-size: 6px;
 		padding: 5px 5px;
   }
 
-  .slider, .arrow-left, .arrow-right {
-	display: none;
-}
-
-}
+  	#slider-container .slider, .arrow-left, .arrow-right {
+	display: none; 
+}}
