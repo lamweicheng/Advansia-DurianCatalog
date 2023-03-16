@@ -9,7 +9,6 @@ body{
 	overflow-y: scroll;
 }
  
-
 #canvas{
 	width: 1200px;
 	 height: calc(100% - 20px); 
@@ -76,14 +75,12 @@ body{
 	border: 1px solid #cccccc;
 	border-radius: 3px;
 	font-size: 18px;
-	width: 36px; /* Fixed width */
-	height: 36px; /* Fixed height */
-	display: flex; /* Added to align content both horizontally and vertically */
-	align-items: center; /* Align content vertically */
-	justify-content: center; /* Align content horizontally */
+	padding: 2px 8px;
 	margin-left: 5px;
 	cursor: pointer;
 }
+
+
 
 
 #book-zoom{
