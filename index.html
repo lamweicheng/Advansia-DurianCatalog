@@ -9,32 +9,11 @@
 </head>
 
 <style>
-.zoom-controls {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 99;
-}
-
-.zoom-button {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    font-size: 18px;
-	 width: 36px; /* Fixed width */
-    height: 36px; /* Fixed height */
-    display: flex; /* Added to align content both horizontally and vertically */
-    align-items: center; /* Align content vertically */
-    justify-content: center; /* Align content horizontally */
-    margin-left: 5px;
-    cursor: pointer;
-}
-
 
 </style>
 
 <body>
-	<div class="zoom-controls">
+	<div class="zoom-controls hidden">
 		<button id="zoomIn" class="zoom-button">+</button>
 		<button id="zoomOut" class="zoom-button">-</button>
   </div>
@@ -45,7 +24,7 @@
 		
 		<div id="book-zoom" class="Advansia-Docs">
 			
-					<div ignore="1" class="tabs">
+					<div ignore="1" class="tabs hidden">
 						<div 
 							class="left">  
 						</div> 
@@ -58,8 +37,8 @@
 	
 
 	<div class="slider-footer-wrapper">
-		<div class="arrow left-arrow-mobile">&larr;</div> <!-- New mobile arrow -->
-		<div id="slider-container">
+		<div class="arrow left-arrow-mobile hidden">&larr;</div> <!-- New mobile arrow -->
+		<div id="slider-container" class="hidden">
 			<div class="arrow left-arrow">&larr;</div>
 			
 				<div id="slider-bar" class="turnjs-slider">
@@ -68,7 +47,7 @@
 			<div class="arrow right-arrow">&rarr;</div>
 			
 		</div>
-		<div class="arrow right-arrow-mobile">&rarr;</div> <!-- New mobile arrow -->
+		<div class="arrow right-arrow-mobile hidden">&rarr;</div> <!-- New mobile arrow -->
 	
 		<div class="footer">
 			<p>Copyright© 2023 - All Rights Reserved</p>
@@ -356,12 +335,6 @@ function zoom(factor) {
     flipbook.css("transform", "scale(" + newZoom + ")");
     flipbook.data("zoom", newZoom);
 }
-
-
-
-
-
-
 
 </script>
 </body>

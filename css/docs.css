@@ -75,12 +75,14 @@ body{
 	border: 1px solid #cccccc;
 	border-radius: 3px;
 	font-size: 18px;
-	padding: 2px 8px;
+	width: 36px; /* Fixed width */
+	height: 36px; /* Fixed height */
+	display: flex; /* Added to align content both horizontally and vertically */
+	align-items: center; /* Align content vertically */
+	justify-content: center; /* Align content horizontally */
 	margin-left: 5px;
 	cursor: pointer;
 }
-
-
 
 
 #book-zoom{
