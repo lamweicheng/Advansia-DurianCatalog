@@ -218,16 +218,16 @@ body{
  @media screen and (max-width: 1284px) and (min-width: 1125px) {
 	#canvas {
 		 width: 100vw;
-		 height:100vh; /* Change this to 100vh to better fit the screen */
+		 height: 50vh; /* Change this to 100vh to better fit the screen */
 	}
 
 	.Advansia-Docs {
 		 width: 100vw;
-		 height: 100vh; /* Change this to 100vh to better fit the screen */
+		 height: 50vh; /* Change this to 100vh to better fit the screen */
 	}
 
 	.Advansia-Docs .page {
-		 width: 25%; /* Change this from the fixed width to a percentage value */
+		 width: 90%; /* Change this from the fixed width to a percentage value */
 	}
 
 	.footer {
@@ -240,8 +240,9 @@ body{
 		font-size: 6px; /* Adjust the font size for mobile */
 		padding: 6px 10px; /* Adjust the button padding for mobile */
   }	
-  #slider-container .slider, .arrow-left, .arrow-right {
-	display: none; 
+  .Advansia-Docs .slider-bar {
+	display: none;
+
 }
 }
 
@@ -249,34 +250,34 @@ body{
 @media screen and (max-width: 1125px) and (min-width: 828px) {
 	#canvas {
 		 width: 100vw;
-		 height: 100vh; /* Change this to 100vh to better fit the screen */
+		 height: 50vh; /* Change this to 100vh to better fit the screen */
 	}
 
 	.Advansia-Docs {
 		 width: 100vw;
-		 height: 90vh; /* Change this to 100vh to better fit the screen */
+		 height: 50vh; /* Change this to 100vh to better fit the screen */
 	}
 
 	.Advansia-Docs .page {
-		 width:50%; /* Change this from the fixed width to a percentage value */
+		 width: 90%; /* Change this from the fixed width to a percentage value */
 	}
 
 	.footer {
-		 padding: 10px; /* Reduce the padding on mobile devices */
+		 padding: 12px; /* Reduce the padding on mobile devices */
 		 font-size: 12px; /* Reduce the font size on mobile devices */
 	}
 
 
 	.info-button {
 		font-size: 6px; /* Adjust the font size for mobile */
-		padding: 6px 10px; /* Adjust the button padding for mobile */
+		padding: 5px 5px; /* Adjust the button padding for mobile */
   }	
   
-  #slider-container .slider, .arrow-left, .arrow-right {
-	display: none; 
+  .Advansia-Docs .slider-bar {
+	display: none;
+}
 }
 
-}
 
 /* For mobile devices */
 @media screen and (max-width: 767px) {
@@ -304,6 +305,7 @@ body{
 		padding: 5px 5px;
   }
 
-  	#slider-container .slider, .arrow-left, .arrow-right {
+  	/* #slider-container .slider, .arrow-left, .arrow-right {
 	display: none; 
-}}
+	} */
+}
