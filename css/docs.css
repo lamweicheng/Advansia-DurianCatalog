@@ -14,9 +14,15 @@ body{
 	 height: calc(100% - 20px); 
 }
 
+.left-arrow-mobile,
+.right-arrow-mobile {
+    display: none;
+}
+
+
 .footer {
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.9); 
+	background-color: rgba(249, 243, 243, 0.939); 
 	text-align: center;
 	padding: 10px;
 	z-index: 1000;
@@ -297,7 +303,6 @@ body{
 }
 }
 
-
 /* For mobile devices */
 @media screen and (max-width: 767px) {
 	#canvas {
@@ -307,7 +312,7 @@ body{
 
 	.Advansia-Docs {
 		 width: 100vw;
-		 height: 50vh; 
+		 height: 50vh;
 	}
 
 	.Advansia-Docs .page {
@@ -315,56 +320,61 @@ body{
 	}
 
 	.footer {
-		position: relative; /* Make the footer a relative container */
-		z-index: 10; /* Make sure the footer is above other elements */
-		padding: 12px;
-		font-size: 12px;
-		bottom:0;
+		 position: relative; /* Make the footer a relative container */
+		 z-index: 10; /* Make sure the footer is above other elements */
+		 padding: 12px;
+		 font-size: 12px;
+		 bottom: 0;
 	}
 
 	.info-button {
-		font-size: 6px;
-		padding: 5px 5px;
-  }
-
-  .arrow-left, .arrow-right {
-	font-size: 24px;
-	bottom: 60px;
-	z-index: 11; /* Make sure arrows are above other elements */
+		 font-size: 6px;
+		 padding: 5px 5px;
 	}
 
-	.arrow-left {
-		left: 20%;
+	.left-arrow,
+	.right-arrow {
+		 display: none;
 	}
 
-	.arrow-right {
-		right: 20%;
+	/* Show and position mobile arrows */
+	.left-arrow-mobile,
+	.right-arrow-mobile {
+		 display: block;
+		 position: absolute;
+		 font-size: 24px;
+		 bottom: 80px; /* Adjust to position arrows above the footer */
+		 z-index: 11;
+	}
+
+	.left-arrow-mobile {
+		 left: 20%;
+	}
+
+	.right-arrow-mobile {
+		 right: 20%;
 	}
 
 	#slider-container {
-		display:none;
+		 display: none; /* Hide the slider container */
 	}
 
-  .zoom-controls {
-	display: flex;
-	flex-direction: row;
+	.zoom-controls {
+		 display: flex;
+		 flex-direction: row;
+	}
+
+	.zoom-button {
+		 background-color: #ffffff;
+		 border: 1px solid #cccccc;
+		 border-radius: 3px;
+		 font-size: 18px;
+		 width: 30px; /* Fixed width */
+		 height: 30px; /* Fixed height */
+		 display: flex; /* Added to align content both horizontally and vertically */
+		 align-items: center; /* Align content vertically */
+		 justify-content: center; /* Align content horizontally */
+		 margin-left: 10px;
+		 cursor: pointer;
+	}
 }
-  .zoom-button {
-	background-color: #ffffff;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	font-size: 18px;
-	width: 30px; /* Fixed width */
-	height: 30px; /* Fixed height */
-	display: flex; /* Added to align content both horizontally and vertically */
-	align-items: center; /* Align content vertically */
-	justify-content: center; /* Align content horizontally */
-	margin-left: 10px;
-	cursor: pointer;
-  }
-
-
-
-}
-
-

@@ -52,19 +52,23 @@
 					<div 
 						class="right"> 
 					</div>
-			
 			</div>
 		</div>
 	</div>
 	
+
 	<div class="slider-footer-wrapper">
+		<div class="arrow left-arrow-mobile">&larr;</div> <!-- New mobile arrow -->
 		<div id="slider-container">
 			<div class="arrow left-arrow">&larr;</div>
+			
 				<div id="slider-bar" class="turnjs-slider">
 					<div id="slider"></div>
 				</div>
 			<div class="arrow right-arrow">&rarr;</div>
+			
 		</div>
+		<div class="arrow right-arrow-mobile">&rarr;</div> <!-- New mobile arrow -->
 	
 		<div class="footer">
 			<p>Copyright© 2023 - All Rights Reserved</p>
@@ -91,7 +95,12 @@
 			<p> Please report any issues here: <a href="mailto:lamweicheng@berkeley.edu">lamweicheng@berkeley.edu</a> </p>
 		</div>
 	</div>
+
 	
+	
+  
+
+
 
 <script type="text/javascript">
 	
@@ -143,7 +152,7 @@ function loadApp() {
 		}
 	});
 
-	//Arrows for navigating
+	//Arrows for navigating 
 
 	$(document).ready(function() {
     // Add click event listener for the left arrow
@@ -153,6 +162,16 @@ function loadApp() {
 
 		// Add click event listener for the right arrow
 		$(".right-arrow").on("click", function() {
+			$(".Advansia-Docs").turn("next");
+		});
+
+		 // Add click event listener for the left mobile arrow
+		 $(".left-arrow-mobile").on("click", function() {
+			$(".Advansia-Docs").turn("previous");
+		});
+
+		// Add click event listener for the right mobile arrow
+		$(".right-arrow-mobile").on("click", function() {
 			$(".Advansia-Docs").turn("next");
 		});
 	});
