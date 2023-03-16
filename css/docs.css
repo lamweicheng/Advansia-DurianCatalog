@@ -9,6 +9,7 @@ body{
 	overflow-y: scroll;
 }
  
+
 #canvas{
 	width: 1200px;
 	 height: calc(100% - 20px); 

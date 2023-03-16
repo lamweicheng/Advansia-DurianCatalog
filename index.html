@@ -21,7 +21,7 @@
   
 
 	<div id="canvas">
-		
+		<div id="book-wrapper">
 		<div id="book-zoom" class="Advansia-Docs">
 			
 					<div ignore="1" class="tabs hidden">
@@ -31,6 +31,7 @@
 					<div 
 						class="right"> 
 					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -334,7 +335,21 @@ function zoom(factor) {
     flipbook.css("transform-origin", "center center");
     flipbook.css("transform", "scale(" + newZoom + ")");
     flipbook.data("zoom", newZoom);
+
+    // Add the following lines of code to allow scrolling
+    if (newZoom > 1) {
+        $("#canvas").css("overflow", "auto");
+    } else {
+        $("#canvas").css("overflow", "hidden");
+    }
+
+    // Keep the first page centered
+    if ($(".Advansia-Docs").turn("page") === 1) {
+        $(".Advansia-Docs").turn("center");
+    }
 }
+
+
 
 </script>
 </body>
