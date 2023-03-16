@@ -9,8 +9,10 @@
 - Online site: https://lamweicheng.github.io/Advansia-DurianCatalog/
 - Advansia Website : https://www.advansia.com/
 
+
+~~~
 Main Key Features:
 1) Convert PNG Images to a Flipbook that user can flip using both arrows and flipping the page 
 2) Zoom in and Zoom out Function
-3) Functional Arrows for navigating from pages to pages 
-
+3) Functional Arrows for navigating from pages to pages
+~~~
