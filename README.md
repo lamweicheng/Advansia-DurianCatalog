@@ -1,6 +1,6 @@
-# Advansia Malaysia Durian PAckage E-Catalogue
+# Advansia Malaysia Durian Package E-Catalogue
 
-## Code Programmer: Anderson Lam Wei Cheng, Junior Transfer at UC Berkeley EECS'24, lamweicheng@berkeley.edu
+## Code Programmer: Anderson Lam Wei Cheng, Junior at UC Berkeley EECS'24, lamweicheng@berkeley.edu
 
 
 
